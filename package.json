@@ -17,6 +17,7 @@
     "lint": "npm run lint:source",
     "lint:fix": "npm run lint:fix:source",
     "test:generate-reference": "node ./dist/test/test/generateReferenceFiles",
+    "test:serve": "npm run transpile:test && npm run test",
     "test": "mocha ./dist/test/test/**/*.test.js --reporter spec",
     "nyc": "nyc --extension=ts --reporter=html --reporter=text --reporter=lcov -x \"source/test\" npm run test",
     "cover": "nyc report --extension=ts --reporter=text-lcov | coveralls",
